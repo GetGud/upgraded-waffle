@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-cream: #FDFAF6;
+  --color-sage: #568d6e;
+  --color-blush: #D4896B;
+  --color-dark: #1E2B24;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sage-600 text-white px-8 py-3.5 rounded-full font-medium text-sm tracking-wide hover:bg-sage-700 transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-sage-600 text-sage-700 px-8 py-3 rounded-full font-medium text-sm tracking-wide hover:bg-sage-50 transition-all duration-200 active:scale-95;
+  }
+
+  .btn-blush {
+    @apply bg-blush-500 text-white px-8 py-3.5 rounded-full font-medium text-sm tracking-wide hover:bg-blush-600 transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .badge-safety {
+    @apply inline-flex items-center gap-1 bg-sage-100 text-sage-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+}
